@@ -4,12 +4,14 @@
 }
 
 title {
+    display: inline-block;
     height: 20vh;
     width: 100vw;
     text-align: center;
 }
 
 body {
+    display: inline-block;
     height: 80vh;
     width: 20vw;
     text-align: center;
