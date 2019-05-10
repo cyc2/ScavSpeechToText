@@ -1,7 +1,7 @@
 /**
  * @see https://developer.mozilla.org/ja/docs/Web/API/SpeechGrammarList#Examples
  */
-export const ColorGrammar = new SpeechGrammarList();
+/*export const ColorGrammar = new SpeechGrammarList();
 
 ColorGrammar.addFromString(
 `#JSGF V1.0;
@@ -13,4 +13,4 @@ public <color> = aqua | azure | beige | bisque |
   orange | orchid | peru | pink | plum | purple | red | salmon | sienna |
   silver | snow | tan | teal | thistle | tomato | turquoise |
   violet | white | yellow ;
-`, 1);
+`, 1);*/

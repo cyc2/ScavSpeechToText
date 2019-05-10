@@ -17,9 +17,6 @@ import {
   exports: [
     SubComponent,
     RxComponent,
-  ],
-  bootstrap: [
-    SubComponent
   ]
 })
 export class SubModule { }

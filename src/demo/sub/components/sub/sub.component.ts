@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {
+/*import {
   ColorGrammar,
-} from './sub.component.grammar';
+} from './sub.component.grammar';*/
 import {
   SpeechRecognitionLang,
   SpeechRecognitionMaxAlternatives,
@@ -26,10 +26,10 @@ import {
       provide: SpeechRecognitionMaxAlternatives,
       useValue: 1,
     },
-    {
+    /*{
       provide: SpeechRecognitionGrammars,
       useValue: ColorGrammar,
-    },
+    },*/
     SpeechRecognitionService,
   ],
 })
