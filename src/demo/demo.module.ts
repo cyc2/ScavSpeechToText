@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, APP_BASE_HREF } from '@angular/common';
 import { DemoComponent } from './demo.component';
 import { MainComponent } from './components';
 
@@ -33,7 +33,9 @@ import { SpeechRecognitionModule } from '../../projects/ngx-speech-recognition/s
     }),
     SubModule,
   ],
-  providers: [],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/' },
+  ],
   bootstrap: [DemoComponent]
 })
 export class DemoModule { }

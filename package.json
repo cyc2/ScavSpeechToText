@@ -10,17 +10,20 @@
   "private": false,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build ngx-speech-recognition",
     "copy": "cp ./README.md ./dist/ngx-speech-recognition/ && cp ./speech.gif ./dist/ngx-speech-recognition/ && cp ./LICENSE ./dist/ngx-speech-recognition/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "dependencies": {
     "@angular/animations": "^7.2.10",
+    "@angular/cli": "^7.3.9",
     "@angular/common": "^7.2.10",
     "@angular/compiler": "^7.2.10",
+    "@angular/compiler-cli": "^7.2.15",
     "@angular/core": "^7.2.10",
     "@angular/forms": "^7.2.10",
     "@angular/http": "^7.2.10",
@@ -30,20 +33,24 @@
     "@angular/router": "^7.2.10",
     "@ngtools/webpack": "7.3.3",
     "core-js": "^2.6.4",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.4.0",
+    "typescript": "3.2",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.1",
     "@angular-devkit/build-ng-packagr": "~0.13.0",
     "@angular-devkit/core": "^7.3.1",
-    "@angular/cli": "^7.3.6",
-    "@angular/compiler-cli": "^7.2.10",
+    "@angular/cli": "^7.3.9",
+    "@angular/compiler-cli": "^7.2.15",
     "@angular/language-service": "^7.2.10",
     "@types/jasmine": "^3.3.9",
     "@types/node": "^10.12.24",
     "codelyzer": "^4.5.0",
+    "enhanced-resolve": "^4.1.0",
     "jasmine-core": "^3.3.0",
     "jasmine-spec-reporter": "^4.2.1",
     "karma": "^4.0.0",
@@ -59,5 +66,9 @@
     "tslint": "^5.12.1",
     "typescript": "3.2",
     "webpack": "^4.29.4"
+  },
+  "engines": {
+    "node": "10.11.0",
+    "npm": "6.4.1"
   }
 }
