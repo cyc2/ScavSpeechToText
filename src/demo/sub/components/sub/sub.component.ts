@@ -8,11 +8,13 @@ import {
   SpeechRecognitionGrammars,
   SpeechRecognitionService,
 } from '../../../../../projects/ngx-speech-recognition/src/public_api';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'demo-sub',
   templateUrl: './sub.component.html',
   styleUrls: ['./sub.component.css'],
+  encapsulation: ViewEncapsulation.None,
   providers: [
     // Dependency Inject to SpeechRecognitionService
     // like this.
