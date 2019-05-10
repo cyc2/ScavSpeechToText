@@ -11,8 +11,8 @@ import {
 
 @Component({
   selector: 'demo-sub',
-  templateUrl: '../../../demo.component.html',
-  styleUrls: ['../../../demo.component.css'],
+  templateUrl: './sub.component.html',
+  styleUrls: ['./sub.component.css'],
   providers: [
     // Dependency Inject to SpeechRecognitionService
     // like this.
