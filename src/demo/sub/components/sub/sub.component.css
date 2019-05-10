@@ -1,18 +1,9 @@
-.button {
-    width: 100px;
-    height: 80px;
-}
-
 title {
-    display: inline-block;
-    height: 20vh;
-    width: 100vw;
+    display: block;
     text-align: center;
 }
 
 body {
-    display: inline-block;
-    height: 80vh;
-    width: 20vw;
+    display: block;
     text-align: center;
 }
