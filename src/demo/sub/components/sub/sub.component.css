@@ -1,0 +1,15 @@
+title {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    text-align: center;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    height: 80vh;
+    width: 20vw;
+    text-align: center;
+    flex-direction: column;
+}
