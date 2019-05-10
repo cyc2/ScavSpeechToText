@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 /*import {
   ColorGrammar,
 } from './sub.component.grammar';*/
@@ -13,6 +13,7 @@ import {
   selector: 'demo-sub',
   templateUrl: './sub.component.html',
   styleUrls: ['./sub.component.css'],
+  encapsulation: ViewEncapsulation.None,
   providers: [
     // Dependency Inject to SpeechRecognitionService
     // like this.
