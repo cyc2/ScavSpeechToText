@@ -4,10 +4,12 @@
 
 :host {
   display: flex;
+  text-align: center;
   width: 100vw;
   flex-direction: column;
 }
 
 :host * {
+  padding: 20px;
   border: solid 1px black;
 }

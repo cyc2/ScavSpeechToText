@@ -161,7 +161,7 @@ export class SpeechRecognitionModule {
   }
 
 
-  static forRoot(config: SpeechRecognitionConfig): ModuleWithProviders {
+  /*static forRoot(config: SpeechRecognitionConfig): ModuleWithProviders {
     const providers: Provider[] = SpeechRecognitionModule.buildProvidersFromConfig(config);
     providers.push({
       useClass: SpeechRecognitionService,
@@ -175,12 +175,29 @@ export class SpeechRecognitionModule {
       ngModule: SpeechRecognitionModule,
       providers: providers,
     };
+  }*/
+
+  static forRoot(config: SpeechRecognitionConfig): ModuleWithProviders {
+    return {
+      ngModule: SpeechRecognitionModule,
+      providers: [
+        SpeechRecognitionModule.buildProvidersFromConfig(config),
+        {
+          useClass: SpeechRecognitionService,
+          provide: SpeechRecognitionService
+        },
+        {
+          useClass: RxSpeechRecognitionService,
+          provide: RxSpeechRecognitionService
+        }
+      ],
+    };
   }
 
   static withConfig(config: SpeechRecognitionConfig): ModuleWithProviders {
     return {
       ngModule: SpeechRecognitionModule,
-      providers: SpeechRecognitionModule.buildProvidersFromConfig(config),
+      //providers: SpeechRecognitionModule.buildProvidersFromConfig(config),
     };
   }
 }
