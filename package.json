@@ -13,10 +13,10 @@
     "start": "node server.js",
     "build": "ng build ngx-speech-recognition",
     "copy": "cp ./README.md ./dist/ngx-speech-recognition/ && cp ./speech.gif ./dist/ngx-speech-recognition/ && cp ./LICENSE ./dist/ngx-speech-recognition/",
+    "postinstall": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "e2e": "ng e2e"
   },
   "dependencies": {
     "@angular/animations": "^7.2.10",
