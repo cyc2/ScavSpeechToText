@@ -1,11 +1,5 @@
-<div class="title">
-    <h1>Clap Sound Inserter (#257)</h1>
-</div>
-
-<div class="body">
-    <p>Click👏the👏button👏and👏start👏talking</p>
-    <button [hidden]="started" (click)="start()">Start</button>
-    <button [hidden]="!started" (click)="stop()">Stop</button>
-    <button [hidden]="!canreset" (click)="reset()">Reset</button>
-    <p>Your message: {{display}}</p>
-</div>
+<p>Click👏the👏button👏and👏start👏talking</p>
+<button [hidden]="started" (click)="start()">Start</button>
+<button [hidden]="!started" (click)="stop()">Stop</button>
+<button [hidden]="!canreset" (click)="reset()">Reset</button>
+<p>Your message: {{display}}</p>

@@ -17,6 +17,7 @@
 .main {
   float:left;
   width:60%;
+  text-align: center;
   padding:0 20px;
 }
 .right {
