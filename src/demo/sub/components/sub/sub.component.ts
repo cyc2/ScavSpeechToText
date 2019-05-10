@@ -39,8 +39,7 @@ export class SubComponent {
   public started = false;
   public message = '';
   public display = '';
-  public len = 1;
-  public canreset = 0;
+  public len;
 
   constructor(
     private service: SpeechRecognitionService,
@@ -57,15 +56,15 @@ export class SubComponent {
         this.message += e.results[i].item(0).transcript;
       }
       this.display = this.message.split(' ').join('👏');
-      this.canreset = 1;
       //console.log(e.results.length);
-      //console.log('SubComponent:onresult', this.message, e);
+      console.log('SubComponent:onresult', this.message, e);
     };
   }
 
   start() {
     this.started = true;
     this.service.start();
+    this.reset();
   }
 
   stop() {
@@ -74,8 +73,7 @@ export class SubComponent {
   }
 
   reset() {
-    this.canreset = 0;
-    this.len = 1;
+    this.len = 0;
     this.message = '';
     this.display = '';
   }
