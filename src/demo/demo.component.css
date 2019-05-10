@@ -1,19 +1,25 @@
-/*
-* {
-  margin: 0;
-}
-
 :host {
   display: flex;
   text-align: center;
   width: 98vw;
   height: 80vh;
   flex-direction: column;
-}
-
-:host * {
-  padding-top: 10%;
-  height: 50vh;
   border: solid 1px black;
 }
-*/
+
+.button {
+  width: 100px;
+  height: 80px;
+}
+
+title {
+  height: 20vh;
+  width: 100vw;
+  text-align: center;
+}
+
+body {
+  height: 80vh;
+  width: 20vw;
+  text-align: center;
+}
