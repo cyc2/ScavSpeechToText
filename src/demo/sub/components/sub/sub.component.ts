@@ -8,13 +8,11 @@ import {
   SpeechRecognitionGrammars,
   SpeechRecognitionService,
 } from '../../../../../projects/ngx-speech-recognition/src/public_api';
-import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'demo-sub',
   templateUrl: './sub.component.html',
   styleUrls: ['./sub.component.css'],
-  encapsulation: ViewEncapsulation.None,
   providers: [
     // Dependency Inject to SpeechRecognitionService
     // like this.
@@ -38,22 +36,18 @@ import { ViewEncapsulation } from '@angular/core';
 export class SubComponent {
 
   public started = false;
-
   public message = '';
-
   public display = '';
-
   public len = 1;
-
   public canreset = 0;
 
   constructor(
     private service: SpeechRecognitionService,
   ) {
-    console.log('SubComponent', this.service);
+    //console.log('SubComponent', this.service);
 
     this.service.onstart = (e) => {
-      console.log('onstart');
+      //console.log('onstart');
     };
     this.service.onresult = (e) => {
       this.message = '';
@@ -63,8 +57,8 @@ export class SubComponent {
       }
       this.display = this.message.split(' ').join('👏');
       this.canreset = 1;
-      console.log(e.results.length);
-      console.log('SubComponent:onresult', this.message, e);
+      //console.log(e.results.length);
+      //console.log('SubComponent:onresult', this.message, e);
     };
   }
 
