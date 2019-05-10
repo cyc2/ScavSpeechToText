@@ -18,5 +18,8 @@ import {
     SubComponent,
     RxComponent,
   ],
+  bootstrap: [
+    SubComponent
+  ]
 })
 export class SubModule { }

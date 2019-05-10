@@ -1,7 +1,7 @@
 /**
  * @see https://developer.mozilla.org/ja/docs/Web/API/SpeechGrammarList#Examples
  */
-export const ColorGrammar = new SpeechGrammarList;
+export const ColorGrammar = new SpeechGrammarList();
 
 ColorGrammar.addFromString(
 `#JSGF V1.0;
