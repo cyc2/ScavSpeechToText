@@ -56,11 +56,20 @@ export class SubComponent {
       for(let i = 0; i < this.len; i++) {
         this.message += e.results[i][0].transcript;
       }
-      this.display = this.message.split(' ').join('👏');
-      this.message = '';
+      if(this.display != this.message.split(' ').join('👏')) {
+        this.display = this.message.split(' ').join('👏');
+        this.playAudio();
+      }
       //console.log(e.results.length);
       console.log('SubComponent:onresult', this.display, e);
     };
+  }
+
+  playAudio(){
+    let audio = new Audio();
+    audio.src = "../../../../assets/Hardclap.wav";
+    audio.load();
+    audio.play();
   }
 
   start() {
