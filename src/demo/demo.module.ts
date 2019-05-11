@@ -29,7 +29,7 @@ import { SpeechRecognitionModule } from '../../projects/ngx-speech-recognition/s
       lang: 'en-US',
 
       interimResults: true,
-      maxAlternatives: 10,
+      maxAlternatives: 1,
     }),
     SubModule,
   ],

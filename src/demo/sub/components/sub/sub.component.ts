@@ -56,13 +56,24 @@ export class SubComponent {
       for(let i = 0; i < this.len; i++) {
         this.message += e.results[i][0].transcript;
       }
-      if(this.display != this.message.split(' ').join('👏')) {
-        this.display = this.message.split(' ').join('👏');
+      let clapped = this.message.split(' ').join('👏');
+      console.log("dl: ", this.wordCount(this.display), "cl: ", this.wordCount(clapped));
+      if(this.wordCount(this.display) < this.wordCount(clapped)) {
         this.playAudio();
       }
+      if(this.display != clapped) {
+        this.display = clapped;
+      }
       //console.log(e.results.length);
-      console.log('SubComponent:onresult', this.display, e);
+      //console.log('SubComponent:onresult', this.display, e);
     };
+  }
+
+  wordCount(str) { 
+    if(str === '') {
+      return 0;
+    }
+    return str.split("👏").length;
   }
 
   playAudio(){

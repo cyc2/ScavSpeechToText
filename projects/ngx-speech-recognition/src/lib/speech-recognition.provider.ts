@@ -18,6 +18,6 @@ export const SPEECH_RECOGNITION_DEFAULT: Provider[] = [
   },
   {
     provide: SpeechRecognitionMaxAlternatives,
-    useValue: 100,
+    useValue: 1,
   },
 ];
