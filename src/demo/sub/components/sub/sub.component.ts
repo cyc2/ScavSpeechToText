@@ -37,9 +37,10 @@ import {
 export class SubComponent {
 
   public started = false;
-  public message = '';
   public display = '';
   public len;
+
+  message;
 
   constructor(
     private service: SpeechRecognitionService,
@@ -53,11 +54,12 @@ export class SubComponent {
       this.message = '';
       this.len = e.results.length;
       for(let i = 0; i < this.len; i++) {
-        this.message += e.results[i].item(0).transcript;
+        this.message += e.results[i][0].transcript;
       }
       this.display = this.message.split(' ').join('👏');
+      this.message = '';
       //console.log(e.results.length);
-      console.log('SubComponent:onresult', this.message, e);
+      console.log('SubComponent:onresult', this.display, e);
     };
   }
 
